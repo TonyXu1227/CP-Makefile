@@ -9,6 +9,10 @@ code.cpp:
 - cpp file containing the code
 - takes in inputs from input.txt and outputs in terminal
 
+bits/stdc++.h:
+- a standard all-encompassing header file that includes all relevant CP datastructures
+- modified from the https://gist.github.com/Einstrasse/ac0fe7d7450621a39364ed3b05cacd11 header file
+
 Makefile:
 - Compiles the input into the code.cpp file
 - Creates the ./run executable which runs the code
