@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall
+CXXFLAGS = -std=c++20 -Wall
 
 SRCS = code.cpp
 
@@ -22,3 +22,5 @@ $(EXEC): $(OBJS)
 .PHONY: clean
 clean:
 	rm -f $(OBJS) $(EXEC)
+
+# run cat input.txt | ./run once finished
