@@ -1,0 +1,5 @@
+*.o # all .o files
+./* # all executables
+code.o
+run
+.vscode

@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iostream>
 #define BIG_P (1000000007)
 using namespace std;
  
@@ -14,6 +15,6 @@ int main() {
     cin.exceptions(cin.failbit);
     int t; cin >> t;
     while(t--) {
-
+        cout << "dsd\n";
     }
 }
