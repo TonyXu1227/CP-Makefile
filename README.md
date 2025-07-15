@@ -19,4 +19,4 @@ Makefile:
 
 Also, there is an algos cpp file where copy and pasted scratch work and/or algorithms can be put.
 
-Note that to pipe the input to the executable, run cat input.txt | ./run
+Note that to pipe the input to the executable, run "cat input.txt | ./run"
