@@ -16,3 +16,7 @@ bits/stdc++.h:
 Makefile:
 - Compiles the input into the code.cpp file
 - Creates the ./run executable which runs the code
+
+Also, there is an algos cpp file where copy and pasted scratch work and/or algorithms can be put.
+
+Note that to pipe the input to the executable, run cat input.txt | ./run
