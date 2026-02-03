@@ -35,3 +35,7 @@ ll gcd(ll x, ll y) {
     }
     return x;
 }
+
+ll inv(ll a) {
+  return a <= 1 ? a : BIG_P - (ll)(BIG_P/a) * inv(BIG_P % a) % BIG_P;
+}
