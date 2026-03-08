@@ -1,6 +1,7 @@
 *.o # all .o files
 ./* # all executables
 code.cpp
+code.o
 run
 .vscode
 code.cpp
