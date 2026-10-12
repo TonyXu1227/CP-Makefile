@@ -44,7 +44,7 @@ ll inv(ll a) {
   return a <= 1 ? a : BIG_P - (ll)(BIG_P/a) * inv(BIG_P % a) % BIG_P;
 }
 
-//this fenwick tree
+//this fenwick tree is one indexed
 vll fentree(100000);
 ll fentreequery(ll i) {
     ll ret = 0;
@@ -96,7 +96,6 @@ ll buildsegtree(vll &tree, ll left, ll right, ll ind, vll &arr) {
 }
 
 ll querysegtree(vll &tree, ll v, ll tl, ll tr, ll l, ll r) {
-    //cout << v << " " << tl << " " << tr << " " << l << " " << r << "\n";
     if (l > r) 
         return 0;
     if (l == tl && r == tr) {
@@ -106,4 +105,42 @@ ll querysegtree(vll &tree, ll v, ll tl, ll tr, ll l, ll r) {
     ll n1 = querysegtree(tree, v*2+1, tl, tm, l, min(r, tm));
     ll n2 = querysegtree(tree, v*2+2, tm+1, tr, max(l, tm+1), r);
     return max(n1, n2);
+}
+
+ld dis(ld x1, ld y1, ld x2, ld y2) {
+    ld dx = x1-x2;
+    ld dy = y1-y2;
+    ld ts = dx*dx+dy*dy;
+    return sqrt((ld)ts);
+}
+
+vll ntb(ll n) {
+    vll bits(64);
+    ll m = 0;
+    while(n) {
+        bits[m] = n % 2;
+        n /= 2;
+        m++;
+    }
+    return bits;
+}
+
+ll polyhash(string &s) {
+    ll n = s.length();
+    ll a = 0;
+    for(int i = 0; i < n; i++) {
+        ll v = s[i]-'a';
+        a += v;
+        a %= BIG_P;
+        a *= 26;
+        a %= BIG_P;
+    }
+    return a;
+}
+
+ll query(ll u, ll v, ll d) {
+    cout << "? " << u << " " << v << " " << d << "\n";
+    cout.flush();
+    ll r; cin >> r;
+    return r;
 }
